@@ -1,8 +1,7 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
-
-import { CepService } from 'src/app/services/viacepService/cep.service';
-import { Cep } from "../../interfaces/cep";
+import { Beneficiario } from 'src/app/interfaces/beneficiario';
+import { Municipio } from 'src/app/interfaces/municipio';
 
 @Component({
   selector: 'app-search',
@@ -12,21 +11,20 @@ import { Cep } from "../../interfaces/cep";
 export class SearchComponent implements OnInit {
 
   @Input() search = "";
-  @Output() cepFoundEvent = new EventEmitter<Cep>(); //(cepFoundEvent)="getCepInfo($event)
-
-  cep: string = "";
+  @Output() beneficiarioSearchEvent = new EventEmitter<Beneficiario[]>();
+  @Output() municipioSearchEvent = new EventEmitter<Municipio[]>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onEmitCep(cepInfo: Cep) {
-    this.cepFoundEvent.emit(cepInfo);
+  onEmitBeneficiario(beneInfo: Beneficiario[]) {
+    this.beneficiarioSearchEvent.emit(beneInfo as Beneficiario[]);
   }
 
-  onSubmitLogradouro(logradouroForm: NgForm) {
-
+  onEmitMunicipio(muniInfo: Municipio[]) {
+    this.municipioSearchEvent.emit(muniInfo as Municipio[]);
   }
 
   onSubmitCpfNis(cpfNisForm: NgForm) {

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
+import { Beneficiario } from 'src/app/interfaces/beneficiario';
 import { Cep } from '../../interfaces/cep';
 
 @Component({
@@ -9,8 +10,7 @@ import { Cep } from '../../interfaces/cep';
 })
 export class BeneficiarioComponent implements OnInit {
 
-  cepInfo: Cep = {};
-  ceps: Cep[] = [];
+  beneInfo: Beneficiario[] = [];
 
   constructor(private router: Router) { }
 
@@ -23,8 +23,7 @@ export class BeneficiarioComponent implements OnInit {
 
   // }
  
-  getCepInfo(cepInfo: Cep) {
-    this.cepInfo = cepInfo;
+  getBeneficiarioInfo(beneInfo: Beneficiario[]) {
+    this.beneInfo = beneInfo;
   }
-
 }

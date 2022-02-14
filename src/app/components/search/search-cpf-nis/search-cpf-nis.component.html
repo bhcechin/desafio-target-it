@@ -1,1 +1,17 @@
-<p>search-cpf-nis works!</p>
+<form #cpfNisForm="ngForm" (ngSubmit)="onSubmitCpfNis(cpfNisForm)">
+    <div class="row mt-3">
+        <div class="col-8">
+            <label class="input-label">
+                <input name="cpfNis" id="cpfNis" #cpfNisInput="ngModel" [(ngModel)]="cpfNis" type="text" [placeholder]="'CPF / NIS'" maxlength="11" pattern="[0-9]{11}" required class="form-control"/>
+                <i class="fa fa-search"></i>
+            </label>
+            <div *ngIf="cpfNisInput.invalid && (cpfNisInput.dirty || cpfNisInput.touched)" class="alert alert-danger">
+                <div [hidden]="cpfNisInput.errors?.['minlength']">CPF ou NIS precisa ter 11 caracteres</div>
+            </div>
+        </div>
+
+        <div class="col-2">
+            <button type="submit" class="btn btn-success">Pesquisar</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,230 @@
+{
+  "beneficiarios": [
+    {
+      "beneficiario": {
+        "cpfFormatado": "000.000.000-53",
+        "nis": "string",
+        "nome": "Fulano da Silva Santos"
+      },
+      "enquadramentoAuxilioEmergencial": "ENQUADRAMENTO",
+      "id": 1,
+      "mesDisponibilizacao": "202201",
+      "municipio": {
+        "codigoIBGE": "4314902",
+        "codigoRegiao": "string",
+        "nomeIBGE": "Porto Alegre",
+        "nomeRegiao": "string",
+        "pais": "Brasil",
+        "uf": {
+          "nome": "Rio Grande do Sul",
+          "sigla": "RS"
+        }
+      },
+      "numeroParcela": "1",
+      "responsavelAuxilioEmergencial": {
+        "cpfFormatado": "000.000.000-53",
+        "nis": "string",
+        "nome": "Fulano da Silva Santos"
+      },
+      "situacaoAuxilioEmergencial": "SITUACAO",
+      "valor": 600.00
+    },
+
+    {
+      "beneficiario": {
+        "cpfFormatado": "000.000.000-53",
+        "nis": "string",
+        "nome": "Fulano da Silva Santos"
+      },
+      "enquadramentoAuxilioEmergencial": "ENQUADRAMENTO",
+      "id": 2,
+      "mesDisponibilizacao": "202202",
+      "municipio": {
+        "codigoIBGE": "4314902",
+        "codigoRegiao": "string",
+        "nomeIBGE": "Porto Alegre",
+        "nomeRegiao": "string",
+        "pais": "Brasil",
+        "uf": {
+          "nome": "Rio Grande do Sul",
+          "sigla": "RS"
+        }
+      },
+      "numeroParcela": "2",
+      "responsavelAuxilioEmergencial": {
+        "cpfFormatado": "000.000.000-53",
+        "nis": "string",
+        "nome": "Fulano da Silva Santos"
+      },
+      "situacaoAuxilioEmergencial": "SITUACAO",
+      "valor": 300.00
+    },
+
+    {
+      "beneficiario": {
+        "cpfFormatado": "100.000.000-53",
+        "nis": "string",
+        "nome": "Ciclana da Silva Santos"
+      },
+      "enquadramentoAuxilioEmergencial": "ENQUADRAMENTO",
+      "id": 3,
+      "mesDisponibilizacao": "202203",
+      "municipio": {
+        "codigoIBGE": "4309100",
+        "codigoRegiao": "string",
+        "nomeIBGE": "Gramado",
+        "nomeRegiao": "string",
+        "pais": "Brasil",
+        "uf": {
+          "nome": "Rio Grande do Sul",
+          "sigla": "RS"
+        }
+      },
+      "numeroParcela": "1",
+      "responsavelAuxilioEmergencial": {
+        "cpfFormatado": "000.000.000-53",
+        "nis": "string",
+        "nome": "Ciclana da Silva Santos"
+      },
+      "situacaoAuxilioEmergencial": "SITUACAO",
+      "valor": 400.00
+    },
+
+    {
+      "beneficiario": {
+        "cpfFormatado": "200.000.000-53",
+        "nis": "string",
+        "nome": "Avulano da Silva Santos"
+      },
+      "enquadramentoAuxilioEmergencial": "ENQUADRAMENTO",
+      "id": 1,
+      "mesDisponibilizacao": "202201",
+      "municipio": {
+        "codigoIBGE": "4314902",
+        "codigoRegiao": "string",
+        "nomeIBGE": "Porto Alegre",
+        "nomeRegiao": "string",
+        "pais": "Brasil",
+        "uf": {
+          "nome": "Rio Grande do Sul",
+          "sigla": "RS"
+        }
+      },
+      "numeroParcela": "1",
+      "responsavelAuxilioEmergencial": {
+        "cpfFormatado": "000.000.000-53",
+        "nis": "string",
+        "nome": "Avulano da Silva Santos"
+      },
+      "situacaoAuxilioEmergencial": "SITUACAO",
+      "valor": 100.00
+    },
+
+    {
+      "beneficiario": {
+        "cpfFormatado": "200.000.000-53",
+        "nis": "string",
+        "nome": "Avulano da Silva Santos"
+      },
+      "enquadramentoAuxilioEmergencial": "ENQUADRAMENTO",
+      "id": 1,
+      "mesDisponibilizacao": "202202",
+      "municipio": {
+        "codigoIBGE": "4314902",
+        "codigoRegiao": "string",
+        "nomeIBGE": "Porto Alegre",
+        "nomeRegiao": "string",
+        "pais": "Brasil",
+        "uf": {
+          "nome": "Rio Grande do Sul",
+          "sigla": "RS"
+        }
+      },
+      "numeroParcela": "2",
+      "responsavelAuxilioEmergencial": {
+        "cpfFormatado": "200.000.000-53",
+        "nis": "string",
+        "nome": "Avulano da Silva Santos"
+      },
+      "situacaoAuxilioEmergencial": "SITUACAO",
+      "valor": 100.00
+    },
+
+    {
+      "beneficiario": {
+        "cpfFormatado": "300.000.000-53",
+        "nis": "string",
+        "nome": "Bevulano da Silva Santos"
+      },
+      "enquadramentoAuxilioEmergencial": "ENQUADRAMENTO",
+      "id": 1,
+      "mesDisponibilizacao": "202101",
+      "municipio": {
+        "codigoIBGE": "4314902",
+        "codigoRegiao": "string",
+        "nomeIBGE": "Porto Alegre",
+        "nomeRegiao": "string",
+        "pais": "Brasil",
+        "uf": {
+          "nome": "Rio Grande do Sul",
+          "sigla": "RS"
+        }
+      },
+      "numeroParcela": "2",
+      "responsavelAuxilioEmergencial": {
+        "cpfFormatado": "300.000.000-53",
+        "nis": "string",
+        "nome": "Bevulano da Silva Santos"
+      },
+      "situacaoAuxilioEmergencial": "SITUACAO",
+      "valor": 100.00
+    }
+  ],
+
+  "municipios": [
+    {
+      "dataReferencia": "2022-02-14",
+      "id": 1,
+      "municipio": {
+        "codigoIBGE": "4314902",
+        "codigoRegiao": "string",
+        "nomeIBGE": "Porto Alegre",
+        "nomeRegiao": "string",
+        "pais": "string",
+        "uf": {
+          "nome": "Rio Grande do Sul",
+          "sigla": "RS"
+        }
+      },
+      "quantidadeBeneficiados": 2,
+      "tipo": {
+        "descricao": "string",
+        "descricaoDetalhada": "string",
+        "id": 1
+      },
+      "valor": 1200.00
+    },
+    {
+      "dataReferencia": "2022-02-14",
+      "id": 2,
+      "municipio": {
+        "codigoIBGE": "4309100",
+        "codigoRegiao": "string",
+        "nomeIBGE": "Gramado",
+        "nomeRegiao": "string",
+        "pais": "string",
+        "uf": {
+          "nome": "Rio Grande do Sul",
+          "sigla": "RS"
+        }
+      },
+      "quantidadeBeneficiados": 1,
+      "tipo": {
+        "descricao": "string",
+        "descricaoDetalhada": "string",
+        "id": 1
+      },
+      "valor": 400.00
+    }
+  ]
+}

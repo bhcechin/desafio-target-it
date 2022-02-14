@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Cep } from 'src/app/interfaces/cep';
+import { Municipio } from 'src/app/interfaces/municipio';
 
 @Component({
   selector: 'app-municipio',
@@ -9,8 +9,7 @@ import { Cep } from 'src/app/interfaces/cep';
 })
 export class MunicipioComponent implements OnInit {
 
-  cepInfo: Cep = {};
-  ceps: Cep[] = [];
+  muniInfo: Municipio[] = [];
 
   constructor(private router: Router) { }
 
@@ -23,7 +22,7 @@ export class MunicipioComponent implements OnInit {
 
   // }
  
-  getCepInfo(cepInfo: Cep) {
-    this.cepInfo = cepInfo;
+  getMunicipioInfo(muniInfo: Municipio[]) {
+    this.muniInfo = muniInfo;
   }
 }

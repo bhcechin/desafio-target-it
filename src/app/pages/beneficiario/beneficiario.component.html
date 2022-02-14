@@ -1,18 +1,29 @@
-<div class="container-fluid h-100">
+<div class="container h-100">
     <div class="row">
-        <div class="col-lg-5 col-xl-4">
-            <app-search [search]="'beneficiario'" (cepFoundEvent)="getCepInfo($event)" ></app-search>
+        <div class="col-lg-5">
+            <app-search [search]="'beneficiario'" (beneficiarioSearchEvent)="getBeneficiarioInfo($event)" ></app-search>
         </div>
-        <div class="col-12 col-md-8 mt-2">
-            <div class="row" *ngIf="cepInfo.cep;else elseBlock">
-                <p>Cep: <span>{{cepInfo.cep}}</span></p>
-                <p>IBGE: <span>{{cepInfo.ibge}}</span></p>
-                <p>Localidade: <span>{{cepInfo.localidade}}</span></p>
+        <div class="col-12 col-lg-7 mt-2 border border-1 h-100">
+            <div class="row" *ngIf="beneInfo.length > 0;else elseBlockEmpty">
+                <div class="col-12 border-bottom pt-2" *ngFor="let bene of beneInfo">
+                    <div class="row">
+                        <div class="col-6">
+                            <p><b>Nome</b>: <span>{{bene.beneficiario.nome}}</span></p>
+                            <p><b>CPF</b>: <span>{{bene.beneficiario.cpfFormatado}}</span></p>
+                            <p><b>Código IBGE</b>: <span>{{bene.municipio.codigoIBGE}}</span></p>
+                        </div>
+                        <div class="col-6">
+                            <p><b>Parcela</b>: <span>{{bene.numeroParcela}}</span></p>
+                            <p><b>Valor</b>: <span>R$ {{bene.valor | number: '1.2-2'}}</span></p>
+                            <p><b>Localidade</b>: <span>{{bene.municipio.nomeIBGE}}</span></p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <ng-template #elseBlock>
+
+            <ng-template #elseBlockEmpty>
                 <div class="row">
-                    <p #elseBlock *ngFor="let cep of ceps">{{cep.ibge}}</p>
+                    <p class="text-center">Não há informações a serem exibidas no momento.</p>
                 </div>
             </ng-template>
         </div>

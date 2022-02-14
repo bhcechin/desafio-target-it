@@ -18,7 +18,7 @@
 
         <div class="col-4">
             <label class="input-label">
-                <input #esteMesCheckbox type="checkbox" [checked]="esteMesBool" (change)="btnEsteMes(esteMesCheckbox.checked)" />
+                <input #esteMesCheckbox name="esteMesCheckbox" id="esteMesCheckbox" type="checkbox" [(ngModel)]="esteMesBool" [checked]="esteMesBool" (change)="btnEsteMes(esteMesCheckbox.checked)" />
                 Este Mês
             </label>
         </div>
@@ -27,7 +27,7 @@
     <div class="row mt-3">
         <div class="col-8">
             <label class="input-label">
-                <input name="cep" id="cep" #cepInput="ngModel" [(ngModel)]="cep" type="text" [placeholder]="'Cep'" maxlength="8" pattern="[0-9]{8}" required class="form-control"/>
+                <input name="cep" id="cep" #cepInput="ngModel" [(ngModel)]="cep" type="text" [placeholder]="'Cep, ex: 95670000'" maxlength="8" pattern="[0-9]{8}" required class="form-control"/>
                 <i class="fa fa-search"></i>
             </label>
             <div *ngIf="cepInput.invalid && (cepInput.dirty || cepInput.touched)" class="alert alert-danger">
