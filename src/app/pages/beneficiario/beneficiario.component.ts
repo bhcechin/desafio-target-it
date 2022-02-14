@@ -24,8 +24,6 @@ export class BeneficiarioComponent implements OnInit {
   // }
  
   getCepInfo(cepInfo: Cep) {
-    console.log('BENE ', cepInfo);
-
     this.cepInfo = cepInfo;
   }
 

@@ -3,54 +3,11 @@
         <div class="col-12 pt-2">
             <accordion [isAnimated]="true" [closeOthers]="true">
                 <accordion-group heading="Buscar por Cep">
-                    <form #cepForm="ngForm" (ngSubmit)="onSubmit(cepForm)">
-                        <div class="row">
-                            <div class="col-4">
-                                <label class="input-label">
-                                    <input type="text" [placeholder]="'Ano'" class="form-control"/>
-                                    <i class="fa fa-search"></i>
-                                </label>
-                            </div>
-
-                            <div class="col-8">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <label class="input-label">
-                                            <input type="text" [placeholder]="'Mês'" class="form-control"/>
-                                            <i class="fa fa-search"></i>
-                                        </label>
-                                    </div>
-
-                                    <div class="col-6">
-                                        <label class="input-label">
-                                            <input type="checkbox"/>
-                                            Este Mês
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row mt-3">
-                            <div class="col-8">
-                                <label class="input-label">
-                                    <input name="cep" id="cep" #cepInput="ngModel" [(ngModel)]="cep" type="text" [placeholder]="'Cep'" maxlength="8" pattern="[0-9]{8}" required class="form-control"/>
-                                    <i class="fa fa-search"></i>
-                                </label>
-                                <div *ngIf="cepInput.invalid && (cepInput.dirty || cepInput.touched)" class="alert alert-danger">
-                                    <div [hidden]="cepInput.errors?.['minlength']">Cep precisa ter 8 caracteres</div>
-                                </div>
-                            </div>
-
-                            <div class="col-2">
-                                <button type="submit" class="btn btn-success">Pesquisar</button>
-                            </div>
-                        </div>
-                    </form>
+                    <app-search-cep (cepFoundEvent)="onEmitCep($event)"></app-search-cep>
                 </accordion-group>
 
-                <accordion-group heading="Buscar por Logradouro">
-                    <form #cepForm="ngForm" (ngSubmit)="onSubmit(cepForm)">
+                <accordion-group heading="Buscar por Logradouro"> <!-- minlength = 3 ? + getCepInfoWithLogradouro -->
+                    <form #logradouroForm="ngForm" (ngSubmit)="onSubmitLogradouro(logradouroForm)">
                         <div class="row">
                             <div class="col-4">
                                 <label class="input-label">
@@ -119,7 +76,21 @@
                 </accordion-group>
 
                 <accordion-group heading="Buscar por CPF / NIS" *ngIf="search === 'beneficiario'">
-                    <input class="form-control" disabled />
+                    <form #cpfNisForm="ngForm" (ngSubmit)="onSubmitCpfNis(cpfNisForm)">
+                        <div class="row mt-3">
+                            <div class="col-8">
+                                <label class="input-label">
+                                    <!-- <input name="cep" id="cep" #cepInput="ngModel" [(ngModel)]="cep" type="text" [placeholder]="'Logradouro'" maxlength="8" pattern="[0-9]{8}" required class="form-control"/> -->
+                                    <input class="form-control" disabled />
+                                    <i class="fa fa-search"></i>
+                                </label>
+                            </div>
+
+                            <div class="col-2">
+                                <button type="submit" class="btn btn-success" disabled>Pesquisar</button>
+                            </div>
+                        </div>
+                    </form>
                 </accordion-group>
             </accordion>
         </div>

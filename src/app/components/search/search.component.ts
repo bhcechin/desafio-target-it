@@ -12,35 +12,25 @@ import { Cep } from "../../interfaces/cep";
 export class SearchComponent implements OnInit {
 
   @Input() search = "";
-  @Output() cepFoundEvent = new EventEmitter<Cep>();
+  @Output() cepFoundEvent = new EventEmitter<Cep>(); //(cepFoundEvent)="getCepInfo($event)
 
   cep: string = "";
 
-  constructor(private cepService: CepService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
 
-  onSubmit(cepForm: NgForm) {
-    let validacep = /^[0-9]{8}$/;
+  onEmitCep(cepInfo: Cep) {
+    this.cepFoundEvent.emit(cepInfo);
+  }
 
-    if(validacep.test(this.cep)) {
-      this.cepService.getCepInfo(this.cep)
-        .subscribe(data => {
-          console.log('SEARCH ', data);
-          
-          this.cepFoundEvent.emit(data);
-        })
+  onSubmitLogradouro(logradouroForm: NgForm) {
 
-      this.cep = "";
-      
-      cepForm.resetForm(cepForm.value);
-      cepForm.reset();
-    }
-    else {
-      cepForm.resetForm(cepForm.value);
-      return;
-    }
+  }
+
+  onSubmitCpfNis(cpfNisForm: NgForm) {
+
   }
 
 }

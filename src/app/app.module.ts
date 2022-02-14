@@ -11,6 +11,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SearchComponent } from './components/search/search.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { SearchCepComponent } from './components/search/search-cep/search-cep.component';
+import { SearchLogradouroComponent } from './components/search/search-logradouro/search-logradouro.component';
+import { SearchCpfNisComponent } from './components/search/search-cpf-nis/search-cpf-nis.component';
 
 
 @NgModule({
@@ -20,6 +23,9 @@ import { FormsModule } from '@angular/forms';
     MunicipioComponent,
     NavbarComponent,
     SearchComponent,
+    SearchCepComponent,
+    SearchLogradouroComponent,
+    SearchCpfNisComponent,
   ],
   imports: [
     BrowserModule,

@@ -6,7 +6,8 @@
         <div class="col-12 col-md-8 mt-2">
             <div class="row" *ngIf="cepInfo.cep;else elseBlock">
                 <p>Cep: <span>{{cepInfo.cep}}</span></p>
-                <p>{{cepInfo.ibge}}</p>
+                <p>IBGE: <span>{{cepInfo.ibge}}</span></p>
+                <p>Localidade: <span>{{cepInfo.localidade}}</span></p>
             </div>
             
             <ng-template #elseBlock>

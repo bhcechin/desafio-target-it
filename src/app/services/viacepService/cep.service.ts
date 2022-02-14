@@ -19,6 +19,8 @@ export class CepService {
   }
 
   public getCepInfoWithLogradouro(cidade: string, uf: string, logradouro: string) {
-    
+    let url = `https://viacep.com.br/ws/${uf}/${cidade}/${logradouro}/json/`;
+
+    return this.http.get<Cep[]>(url);
   }
 }

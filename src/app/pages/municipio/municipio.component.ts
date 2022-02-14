@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Cep } from 'src/app/interfaces/cep';
 
 @Component({
   selector: 'app-municipio',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MunicipioComponent implements OnInit {
 
-  constructor() { }
+  cepInfo: Cep = {};
+  ceps: Cep[] = [];
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  // userDetails(id: number) {
+  //   this.router.navigate(['users', id]);
+  //   console.log(id);
+
+  // }
+ 
+  getCepInfo(cepInfo: Cep) {
+    this.cepInfo = cepInfo;
+  }
 }
