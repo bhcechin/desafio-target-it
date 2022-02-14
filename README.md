@@ -7,7 +7,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Download project
 - Run Json Server with `json-server db-portal.json`
 - Run code with `ng serve`
-- Access `http://localhost:4200/`
+- Access `http://localhost:4200/` for the Front End
+- Access `http://localhost:3000/` for the Mocked Back End
 
 ## Development server
 
