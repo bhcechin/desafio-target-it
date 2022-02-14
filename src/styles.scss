@@ -1,1 +1,45 @@
-/* You can add global styles to this file, and also import other style files */
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+@import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
+
+$target-blue: #0077bd;
+$target-orange: #ff9734 ;
+$target-black: #5c6b80;
+
+.ng-valid[required], .ng-valid.required {
+    border-left: 5px solid green;
+}
+
+.ng-invalid:not(form) {
+    border-left: 5px solid red;
+}
+
+html, body {
+    height: 100%;
+}
+
+.roboto-text {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.target-blue-text {
+    color: $target-blue;
+}
+
+.target-orange-text {
+    color: $target-orange;
+}
+
+.target-black-text {
+    color: $target-black;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.semibold {
+    font-weight: 500;
+}

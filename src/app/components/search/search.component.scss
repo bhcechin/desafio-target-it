@@ -1,0 +1,21 @@
+input[type="text"] {
+    padding-left: 22px;
+    width: 100%;
+}
+
+.input-label {
+    position: relative;
+}
+
+.input-label i {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    bottom: 50%;
+}
+
+  
+i:before {
+    transform: translateY(-50%);
+    display: block;
+}

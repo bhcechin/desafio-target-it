@@ -1,0 +1,19 @@
+<div class="container-fluid h-100">
+    <div class="row">
+        <div class="col-lg-5 col-xl-4">
+            <app-search [search]="'beneficiario'" (cepFoundEvent)="getCepInfo($event)" ></app-search>
+        </div>
+        <div class="col-12 col-md-8 mt-2">
+            <div class="row" *ngIf="cepInfo.cep;else elseBlock">
+                <p>Cep: <span>{{cepInfo.cep}}</span></p>
+                <p>{{cepInfo.ibge}}</p>
+            </div>
+            
+            <ng-template #elseBlock>
+                <div class="row">
+                    <p #elseBlock *ngFor="let cep of ceps">{{cep.ibge}}</p>
+                </div>
+            </ng-template>
+        </div>
+    </div>
+</div>
